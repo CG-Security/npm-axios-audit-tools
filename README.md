@@ -22,13 +22,13 @@ docs/
 Use this script to check a Windows endpoint for known indicators of compromise associated with the Axios supply chain attack.
 Run:
 ```
-.\scripts\Invoke-AxiosIOCScan.ps1
+.\\scripts\\Invoke-AxiosIOCScan.ps1
 ```
 This script checks:
 Whether npm is installed on the endpoint
 Whether the Windows RAT artifact (`wt.exe`) is present in `%PROGRAMDATA%`
 Whether the RAT persistence batch file (`system.bat`) is present in `%PROGRAMDATA%`
-Whether a RAT persistence registry key (`MicrosoftUpdate`) exists under `HKCU\Software\Microsoft\Windows\CurrentVersion\Run`
+Whether a RAT persistence registry key (`MicrosoftUpdate`) exists under `HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run`
 Whether the C2 domain (`sfrclak.com`) appears in the local DNS cache
 If npm is not installed, the machine is considered out of scope for package-level auditing. If any IOC is detected, treat the machine as potentially compromised.
 ---
@@ -36,7 +36,7 @@ If npm is not installed, the machine is considered out of scope for package-leve
 Use this script to check Node.js project directories for known compromised package versions.
 Run:
 ```
-.\scripts\Audit-AxiosPackages.ps1 -RootPath 'C:\Projects'
+.\\scripts\\Audit-AxiosPackages.ps1 -RootPath 'C:\\Projects'
 ```
 This script will:
 Recursively locate all `package.json` files under the root path
@@ -59,11 +59,11 @@ cd npm-axios-audit-tools
 ```
 Run the IOC scan:
 ```
-.\scripts\Invoke-AxiosIOCScan.ps1
+.\\scripts\\Invoke-AxiosIOCScan.ps1
 ```
 Run the package audit against your projects directory:
 ```
-.\scripts\Audit-AxiosPackages.ps1 -RootPath 'C:\Projects'
+.\\scripts\\Audit-AxiosPackages.ps1 -RootPath 'C:\\Projects'
 ```
 Both tools are read-only and safe to run on developer machines.
 ---
