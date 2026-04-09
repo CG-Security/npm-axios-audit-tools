@@ -1,0 +1,16 @@
+# Output files
+*.csv
+*.log
+*.txt
+
+# Local scan results
+output/
+results/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.code-workspace
